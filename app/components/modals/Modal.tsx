@@ -143,12 +143,12 @@ const Modal: React.FC<ModalProps> = ({
                 left-9
                 "
                 >
-                  <IoMdClose size={20} />
+                  <IoMdClose size={18} />
                 </button>
                 <div className="text-lg font-semibold">{title}</div>
               </div>
               {/* BODY */}
-              <div className=" relative p-6 flex-auto"></div>
+              <div className=" relative p-6 flex-auto">{body}</div>
               {/* FOOTER */}
               <div className="flex flex-col gap-2 p-6">
                 <div
@@ -166,6 +166,7 @@ const Modal: React.FC<ModalProps> = ({
                       disabled={disabled}
                       label={secondaryActionLabel}
                       onClick={handleSecondaryAction}
+                      
                     />
                   )}
                   <Button
