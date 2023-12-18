@@ -13,16 +13,11 @@ interface UserMenuProps {
   currentUser?: User | null;
 }
 
-
-
-const UserMenu: React.FC<UserMenuProps> = ({
-  currentUser
-}) => {
+const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
   const router = useRouter();
 
   const loginModal = useLoginModal();
   const registerModal = useRegisterModal();
-  
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -34,14 +29,12 @@ const UserMenu: React.FC<UserMenuProps> = ({
     if (!currentUser) {
       return loginModal.onOpen();
     }
-
-    
   }, [loginModal, currentUser]);
 
-  return ( 
+  return (
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
-        <div 
+        <div
           onClick={onRent}
           className="
             hidden
@@ -58,9 +51,9 @@ const UserMenu: React.FC<UserMenuProps> = ({
         >
           Airbnb your home
         </div>
-        <div 
-        onClick={toggleOpen}
-        className="
+        <div
+          onClick={toggleOpen}
+          className="
           p-4
           md:py-1
           md:px-2
@@ -77,13 +70,11 @@ const UserMenu: React.FC<UserMenuProps> = ({
           "
         >
           <AiOutlineMenu />
-          <div className="hidden md:block">
-            
-          </div>
+          <div className="hidden md:block"></div>
         </div>
       </div>
       {isOpen && (
-        <div 
+        <div
           className="
             absolute 
             rounded-xl 
@@ -100,49 +91,25 @@ const UserMenu: React.FC<UserMenuProps> = ({
           <div className="flex flex-col cursor-pointer">
             {currentUser ? (
               <>
-                <MenuItem 
-                  label="My trips" 
-                  onClick={() => {}}
-                />
-                <MenuItem 
-                  label="My favorites" 
-                  onClick={() => {}}
-                />
-                <MenuItem 
-                  label="My reservations" 
-                  onClick={() => {}}
-                />
-                <MenuItem 
-                  label="My properties" 
-                  onClick={() => {}}
-                />
-                <MenuItem 
-                  label="Airbnb your home" 
-                  onClick={() => {}}
-                />
+                <MenuItem label="My Trips" onClick={() => {}} />
+                <MenuItem label="My Favorites" onClick={() => {}} />
+                <MenuItem label="My Reservations" onClick={() => {}} />
+                <MenuItem label="My Properties" onClick={() => {}} />
+                <MenuItem label="Airbnb your home" onClick={() => {}} />
                 <hr />
-                <MenuItem 
-                  label="Logout" 
-                  onClick={() => signOut()}
-                />
+                <MenuItem label="Logout" onClick={() => signOut()} />
               </>
             ) : (
               <>
-                <MenuItem 
-                  label="Login" 
-                  onClick={loginModal.onOpen}
-                />
-                <MenuItem 
-                  label="Sign up" 
-                  onClick={registerModal.onOpen}
-                />
+                <MenuItem label="Login" onClick={loginModal.onOpen} />
+                <MenuItem label="Sign up" onClick={registerModal.onOpen} />
               </>
             )}
           </div>
         </div>
       )}
     </div>
-   );
-}
- 
+  );
+};
+
 export default UserMenu;
