@@ -4,6 +4,7 @@ import Container from "../Container";
 import Logo from "./Logo";
 import UserMenu from "./UserMenu"
 import Search from "./Search";
+import Categories from "./Categories";
 
 import { SafeUser } from "@/app/types";
 
@@ -34,7 +35,9 @@ const Navbar: React.FC<NavBarProps> = ({currentUser}) => {
           </div>
         </Container>
       </div>
+    <Categories />
     </div>
+    
   );
 };
 
