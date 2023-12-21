@@ -32,5 +32,5 @@ export async function DELETE(
             ]
         }
     })
-    return NextResponse.json(reservation)
+    return NextResponse.json(reservation);
  }

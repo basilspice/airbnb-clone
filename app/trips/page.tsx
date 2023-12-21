@@ -1,7 +1,6 @@
 import EmptyState from "@/app/components/EmptyState";
 import ClientOnly from "@/app/components/ClientOnly";
 
-
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import getReservations from "@/app/actions/getReservations";
 
@@ -9,7 +8,6 @@ import TripsClient from "./TripsClient";
 
 const TripsPage = async () => {
   const currentUser = await getCurrentUser();
-
 
   if (!currentUser) {
     return (
@@ -28,7 +26,6 @@ const TripsPage = async () => {
           title="No trips found"
           subtitle="Looks like you havent reserved anything."
         />
-        
       </ClientOnly>
     );
   }
