@@ -73,7 +73,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
           "
         >
           <AiOutlineMenu />
-          <div className="flex flex-row gap-3 text-sm justify-center bg-center">
+          <div className="flex flex-row gap-3 justify-center bg-center">
            {!currentUser?.image ? (currentUser?.name) : (
              
              <Avatar src={currentUser?.image} />
