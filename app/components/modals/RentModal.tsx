@@ -15,7 +15,7 @@ import Input from "../inputs/Input";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
-import { FaUserAstronaut } from "react-icons/fa";
+
 
 enum STEPS {
   CATEGORY = 0,
