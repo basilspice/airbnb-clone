@@ -1,3 +1,4 @@
+
 import { Nunito } from "next/font/google";
 
 import Navbar from "@/app/components/navbar/Navbar";
@@ -9,6 +10,8 @@ import "./globals.css";
 import ClientOnly from "./components/ClientOnly";
 import getCurrentUser from "./actions/getCurrentUser";
 import SearchModal from "./components/modals/SearchModal";
+
+export const dynamic = 'force-dynamic'
 
 export const metadata = {
   title: "Airbnb",
