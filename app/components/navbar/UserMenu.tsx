@@ -73,8 +73,12 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
           "
         >
           <AiOutlineMenu />
-          <div className="hidden md:block">
-            <Avatar src={currentUser?.image} />
+          <div className="flex flex-row gap-3 text-sm justify-center bg-center">
+           {!currentUser?.image ? (currentUser?.name) : (
+             
+             <Avatar src={currentUser?.image} />
+           )}
+           
           </div>
         </div>
       </div>
@@ -96,12 +100,25 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
           <div className="flex flex-col cursor-pointer">
             {currentUser ? (
               <>
-                <MenuItem label="My Trips" onClick={() => router.push('/trips')} />
-                <MenuItem label="My Favorites" onClick={router.push('/favorites')} />
-                <MenuItem label="My Reservations" onClick={() => router.push('/reservations')} />
+                
+                
+                <MenuItem
+                  label="My Trips"
+                  onClick={() => router.push("/trips")}
+                />
+                <MenuItem
+                  label="My Favorites"
+                  onClick={router.push("/favorites")}
+                />
+                <MenuItem
+                  label="My Reservations"
+                  onClick={() => router.push("/reservations")}
+                />
                 <MenuItem label="My Properties" onClick={() => {}} />
                 <MenuItem label="Airbnb your home" onClick={rentModal.onOpen} />
                 <hr />
+
+                <MenuItem label={`${currentUser.email}`} onClick={() => {}} />
                 <MenuItem label="Logout" onClick={() => signOut()} />
               </>
             ) : (
