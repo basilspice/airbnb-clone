@@ -74,11 +74,11 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
         >
           <AiOutlineMenu />
           <div className="flex flex-row gap-3 justify-center bg-center">
-           {!currentUser?.image ? (currentUser?.name) : (
-             
-             <Avatar src={currentUser?.image} />
-           )}
-           
+            {!currentUser?.image ? (
+              currentUser?.name
+            ) : (
+              <Avatar src={currentUser?.image} />
+            )}
           </div>
         </div>
       </div>
@@ -100,25 +100,29 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
           <div className="flex flex-col cursor-pointer">
             {currentUser ? (
               <>
-                
-                
                 <MenuItem
                   label="My Trips"
                   onClick={() => router.push("/trips")}
                 />
-                <MenuItem 
-                  label="My Favorites" 
-                  onClick={() => router.push('/favorites')}
+                <MenuItem
+                  label="My Favorites"
+                  onClick={() => router.push("/favorites")}
                 />
                 <MenuItem
                   label="My Reservations"
                   onClick={() => router.push("/reservations")}
                 />
-                <MenuItem label="My Properties" onClick={() => {}} />
+                <MenuItem
+                  label="My Properties"
+                  onClick={() => router.push("/properties")}
+                />
                 <MenuItem label="Airbnb your home" onClick={rentModal.onOpen} />
                 <hr />
 
-                <MenuItem label={`${currentUser.email}`} onClick={() => {}} />
+                <MenuItem
+                  label={`${currentUser.email}`}
+                  onClick={() => router.push("/properties")}
+                />
                 <MenuItem label="Logout" onClick={() => signOut()} />
               </>
             ) : (
