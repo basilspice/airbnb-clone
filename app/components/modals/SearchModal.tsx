@@ -10,10 +10,11 @@ import { useRouter, useSearchParams } from "next/navigation";
 import useSearchModal from "@/app/hooks/useSearchModal";
 
 import Modal from "./Modal";
-import Calendar from "../inputs/Calendar";
+
 import Counter from "../inputs/Counter";
 import CountrySelect, { CountrySelectValue } from "../inputs/CountrySelect";
 import Heading from "../Heading";
+import DatePicker from "../inputs/DatePicker";
 
 enum STEPS {
   LOCATION = 0,
@@ -143,7 +144,7 @@ const SearchModal = () => {
           title="When do you plan to go?"
           subtitle="Make sure everyone is free!"
         />
-        <Calendar
+        <DatePicker
           onChange={(value) => setDateRange(value.selection)}
           value={dateRange}
         />
