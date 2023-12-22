@@ -73,7 +73,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
           "
         >
           <AiOutlineMenu />
-          <div className="flex flex-row gap-3 justify-center bg-center">
+          <div className="flex flex-row gap-3 justify-center bg-center text-neutral-800 font-extrabold ">
             {!currentUser?.image ? (
               currentUser?.name
             ) : (
