@@ -73,7 +73,7 @@ You will than select the amount of Guests, Bathrooms, and Rooms
 An Image uploader (using cloudinary) will popup to upload a single image of the property  
 Title and description need to be filled out  
 Finally set a price per night and your listing will be ready to go  
-A listing created success message will popup and you will be take back to the first step of the listing creation process  
+A listing created success message will popup and you will be taken back to the first step of the listing creation process  
 
 ## Getting Started
 
