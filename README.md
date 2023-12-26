@@ -22,8 +22,8 @@ This app uses the following:
 This Airbnb clone will allow you to create a new account, or you can use Github OR Google auth for account creation
 
 After creating an account you gain access to the logged in navbar which will show you either your Profile Pic, if you have used Google/Git, or render your name if account was made using website.  
-Once logged in, you will now have addiontal options rendered instead of the Login | Signup options  
-My Trips will take you to the page that has all of your trips planned, showing you propeties that you have reserved  
+Once logged in, you will now have additional options rendered instead of the Login | Signup options  
+My Trips will take you to the page that has all of your trips planned, showing you properties that you have reserved  
 My Favorites will show you the list of properties that you have favorited  
 My Properties will show you all of the property listings that you have available to rent  
 My Reservations will show you reservations people have made with your properties that you have available  
@@ -34,7 +34,7 @@ Clicking on the Airbnb logo will take you to the "homepage"
 Properties will have a unique url id so listings can be shared to random users and always show the same propery based of off the id.  
 https://property-renter.vercel.app/listings/658609354b44b3f67abd9397  
 
-From the properties screen a user can reserve said property for any amount of selected time. Once the second date is selected it wil calculate your total amount based off of the selected time  
+From the properties screen a user can reserve said property for any amount of selected time. Once the second date is selected it will calculate your total amount based off of the selected time  
 
 Hitting reserve (while logged in) will render a small popup modal with a "Success" message  
 If the user is not logged in, the Login modal will popup asking the user to login  
@@ -46,9 +46,9 @@ Guests OR the Property owner can cancel reservations.
 ## Making a reservation  
 
 Anybody can see what dates are available on a listing based off the calendar  
-If a user is not logged in and selects reserve they will be take to the login screen  
+If a user is not logged in and selects reserve they will be taken to the login screen  
 
-If the user is logged in and the reservation was successful they will get a message that will show a success.   
+If the user is logged in and the reservation was successful they will get a message that will show "Success".   
 The page will than redirect the user to their trips page  
 
 ## Search bar
@@ -56,7 +56,7 @@ The page will than redirect the user to their trips page
 Using the search bar users can narrow down the available options by 
 Location, Available Dates, how many Guests
 
-Using the calender users can select the stay duration, and if any of those dates are already reserved they will not render as an option to rent
+Using the calender, users can select the stay duration, and if any of those dates are already reserved they will not render as an option to rent
 
 
 
